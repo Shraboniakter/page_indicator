@@ -33,11 +33,12 @@ class _StepIndicatorScreenState extends State<StepIndicatorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           // ১. ব্যাকগ্রাউন্ড ইমেজ স্লাইডার (PageView)
           PageView.builder(
+            physics: const ClampingScrollPhysics(),
             controller: _pageController,
             onPageChanged: (index) {
               setState(() {
